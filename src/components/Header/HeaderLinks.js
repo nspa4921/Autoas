@@ -27,7 +27,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
       <Link to="about" spy={true} smooth={true} className={classes.list}>
         <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          href="#"
           color="transparent"
           target="_blank"
           className={classes.navLink}
@@ -39,7 +39,7 @@ export default function HeaderLinks(props) {
       <ListItem className={classes.listItem}>
       <Link to="service" spy={true} smooth={true} className={classes.list}>
         <Button
-          href="https://www.creative-tim.com/product/material-kit-react?ref=mkr-navbar"
+          href="#"
           color="transparent"
           target="_blank"
           className={classes.navLink}

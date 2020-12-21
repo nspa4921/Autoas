@@ -45,21 +45,21 @@ export default function LandingPage(props) {
     >
       <div filter data-src={require('assets/img/autoas_12_edited.jpg')} >  
       <GridContainer>
-            <GridItem boxShadow={3} className={classes.container} style={{backgroundColor: bgColors.Default}}>
+            <GridItem xs={12} sm={12} md={8} boxShadow={3} className={classes.container} style={{backgroundColor: bgColors.Default}}>
             <h1> BILPLEJE </h1>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_7_edited_c.jpg')} >  
-      <GridContainer>
-            <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
+      <GridContainer >
+            <GridItem xs={12} sm={12} md={8} align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
               <h1> REPARATION </h1>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_5_edited.jpg')} >  
       <GridContainer>
-            <GridItem  align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
+            <GridItem xs={12} sm={12} md={8} align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
               <h1> BILRUDER </h1>
             </GridItem>
           </GridContainer>
