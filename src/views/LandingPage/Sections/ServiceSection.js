@@ -22,7 +22,7 @@ export default function ServiceSection() {
   return (
     <div id="service" style={{paddingTop: "110px"}} className={classes.section}>
       <GridContainer justify="center">
-      <GridItem xs={12} sm={12} md={12}>
+      <GridItem xs={6} sm={12} md={12}>
           <h2 className={classes.title}>Tjenester</h2>
           <br></br>
           <Image />
@@ -30,7 +30,7 @@ export default function ServiceSection() {
         </GridItem>
       </GridContainer>   
         <GridContainer>
-          <GridItem xs={12} sm={12} md={3}>
+          <GridItem xs={6} sm={12} md={12}>
             <InfoArea
               title="Klargøring"
               description="Kosmetisk klargøring af køretøjets indre og ydre "
@@ -39,7 +39,7 @@ export default function ServiceSection() {
               vertical
             />
           </GridItem>
-          <GridItem xs={12} sm={12} md={3}>
+          <GridItem xs={6} sm={12} md={12}>
             <InfoArea
               title="Lugtfjernelse "
               description="Fjernelse af tunge ubehagelige lugte fra køretøjet forårsaget af: noget brand, tobaksrøg, lugt af animalsk oprindelse ..."
@@ -48,7 +48,7 @@ export default function ServiceSection() {
               vertical
             />
           </GridItem>
-          <GridItem xs={12} sm={12} md={3}>
+          <GridItem xs={6} sm={12} md={12}>
             <InfoArea
               title="Lakbehandling"
               description="Fjernelse af alle typer skader på lakken - lak og monteringsdele på køretøjet (polering, maling, udskiftning)"
@@ -57,7 +57,7 @@ export default function ServiceSection() {
               vertical
             />
             </GridItem>
-            <GridItem xs={12} sm={12} md={3}>
+            <GridItem xs={6} sm={12} md={12}>
             <InfoArea
               title="Forsikringssager  "
               description="I ovenstående beskrivelse.."

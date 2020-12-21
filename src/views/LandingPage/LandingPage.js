@@ -33,6 +33,7 @@ export default function LandingPage(props) {
   const { ...rest } = props;
   const AutoplaySlider = withAutoplay(AwesomeSlider);
   var bgColors = { "Default": 'rgba(0, 0, 0, 0.37)'};
+  const logo = { fontWeight: 500} 
 
   const slider = (
     <AutoplaySlider 
@@ -74,7 +75,7 @@ export default function LandingPage(props) {
       <Header xs={12} sm={12} md={10}
         color="transparent"
         routes={dashboardRoutes}
-        brand={<h1 style={{fontWeight: 500}}>AUTO AS</h1>}
+        brand={<h1 style={logo}>AUTO AS</h1>}
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
