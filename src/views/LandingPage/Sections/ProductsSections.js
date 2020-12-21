@@ -26,15 +26,15 @@ export default function ImgMediaCard() {
 
   return (
 	<div className={classes.section} id="products" style={{paddingTop: '120px'}}>
-		 <GridContainer justify="center" >
-        <GridItem xs={6} sm={12} md={12}>
+		 <GridContainer justify="center">
+        <GridItem xs={12} sm={12} md={10}>
           <h2 className={classes.title} >Produkter</h2>
 		  
-		  <Card className={classesBase.root} >
+		  <Card className={classesBase.root} xs={12} sm={12} md={10}>
       <CardMedia
         className={classesBase.media}
         image={waveImg}
-		title=""
+		    title=""
       />
       <CardContent>
         <Typography gutterBottom variant="h6" component="h2" color="textSecondary">
