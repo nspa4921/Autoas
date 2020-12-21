@@ -9,7 +9,7 @@ import GridItem from 'components/Grid/GridItem';
       return(
         <GridContainer>
           <GridItem xs={12} sm={12} md={12}>
-        <img style={{width: '500px'}} className="picture" src={image} alt="Tjeneste"/>
+        <img className="picture" src={image} alt="Tjeneste"/>
         </GridItem>
         </GridContainer>
      );
