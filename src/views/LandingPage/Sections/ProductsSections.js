@@ -27,7 +27,7 @@ export default function ImgMediaCard() {
   return (
 	<div className={classes.section} id="products" style={{paddingTop: '120px'}}>
 		 <GridContainer justify="center" >
-        <GridItem xs={12} sm={12} md={8}>
+        <GridItem xs={6} sm={12} md={12}>
           <h2 className={classes.title} >Produkter</h2>
 		  
 		  <Card className={classesBase.root} >
