@@ -71,7 +71,7 @@ export default function LandingPage(props) {
   return (
     <div>
       {slider}
-      <Header
+      <Header xs={12} sm={12} md={10}
         color="transparent"
         routes={dashboardRoutes}
         brand={<h1 style={{fontWeight: 500}}>AUTO AS</h1>}
