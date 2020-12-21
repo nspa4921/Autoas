@@ -45,7 +45,7 @@ export default function ProfilePage(props) {
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
   return (
     <div>
-      <Header
+      <Header xs={12} sm={6} md={6}
         color="transparent"
         brand="Material Kit React"
         rightLinks={<HeaderLinks />}
@@ -61,7 +61,7 @@ export default function ProfilePage(props) {
         <div>
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem xs={12} sm={6} md={6}>
                 <div className={classes.profile}>
                   <div>
                     <img src={profile} alt="..." className={imageClasses} />
@@ -91,7 +91,7 @@ export default function ProfilePage(props) {
               </p>
             </div>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={8} className={classes.navWrapper}>
+              <GridItem xs={12} sm={6} md={6} className={classes.navWrapper}>
                 <NavPills
                   alignCenter
                   color="primary"
@@ -101,7 +101,7 @@ export default function ProfilePage(props) {
                       tabIcon: Camera,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
+                          <GridItem xs={12} sm={6} md={6}>
                             <img
                               alt="..."
                               src={studio1}
@@ -113,7 +113,7 @@ export default function ProfilePage(props) {
                               className={navImageClasses}
                             />
                           </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
+                          <GridItem xs={12} sm={6} md={6}>
                             <img
                               alt="..."
                               src={studio5}
@@ -133,7 +133,7 @@ export default function ProfilePage(props) {
                       tabIcon: Palette,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
+                          <GridItem xs={12} sm={6} md={6}>
                             <img
                               alt="..."
                               src={work1}
@@ -150,7 +150,7 @@ export default function ProfilePage(props) {
                               className={navImageClasses}
                             />
                           </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
+                          <GridItem xs={12} sm={6} md={6}>
                             <img
                               alt="..."
                               src={work4}
@@ -170,7 +170,7 @@ export default function ProfilePage(props) {
                       tabIcon: Favorite,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem xs={12} sm={12} md={4}>
+                          <GridItem xs={12} sm={6} md={6}>
                             <img
                               alt="..."
                               src={work4}
@@ -182,7 +182,7 @@ export default function ProfilePage(props) {
                               className={navImageClasses}
                             />
                           </GridItem>
-                          <GridItem xs={12} sm={12} md={4}>
+                          <GridItem xs={12} sm={6} md={6}>
                             <img
                               alt="..."
                               src={work2}
