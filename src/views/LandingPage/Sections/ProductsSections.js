@@ -15,7 +15,7 @@ const useStyles1 = makeStyles({
   },
   media: {
 	height: "420px",
-  }
+  },
 });
 
 export default function ImgMediaCard() {
@@ -27,8 +27,6 @@ export default function ImgMediaCard() {
 		 <GridContainer justify="center">
         <GridItem >
           <h2 className={classes.title}>Produkter</h2>
-		  
-		  
       <CardMedia
         className={classesBase.media}
         image={waveImg}
@@ -38,7 +36,6 @@ export default function ImgMediaCard() {
 		De produkter, der bruges til klargøring (både indvendigt og udvendigt), er verdens kendet brands med en lang tradition og kvalitet i bilverdenen.
         </h5>
       </CardContent>
-    
 	</GridItem>
 		  </GridContainer>
 	</div>

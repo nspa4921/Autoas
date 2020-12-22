@@ -7,7 +7,7 @@ import SimpleReactLightbox from 'simple-react-lightbox';
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
-
+import {Link} from 'react-scroll';
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -33,7 +33,6 @@ export default function LandingPage(props) {
   const { ...rest } = props;
   const AutoplaySlider = withAutoplay(AwesomeSlider);
   var bgColors = { "Default": 'rgba(0, 0, 0, 0.37)'};
-  const logo = { fontWeight: 500} 
 
   const slider = (
     <AutoplaySlider 
@@ -44,23 +43,23 @@ export default function LandingPage(props) {
     cancelOnInteraction={false}
     interval={4000}
     >
-      <div filter data-src={require('assets/img/autoas_12_edited.jpg')} >  
+      <div id="top" filter data-src={require('assets/img/autoas_12_edited.jpg')} >  
       <GridContainer>
-            <GridItem xs={12} sm={12} md={12} boxShadow={3} className={classes.container} style={{backgroundColor: bgColors.Default}}>
+            <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
             <h1> BILPLEJE </h1>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_7_edited_c.jpg')} >  
       <GridContainer >
-            <GridItem xs={12} sm={12} md={12} align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
+            <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
               <h1> REPARATION </h1>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_5_edited.jpg')} >  
       <GridContainer>
-            <GridItem xs={12} sm={12} md={12} align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
+            <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
               <h1> BILRUDER </h1>
             </GridItem>
           </GridContainer>
@@ -72,10 +71,11 @@ export default function LandingPage(props) {
   return (
     <div>
       {slider}
-      <Header xs={12} sm={12} md={10}
+      <Link to="top" spy={true} smooth={true} className={classes.list}>
+      <Header 
         color="transparent"
         routes={dashboardRoutes}
-        brand={<h1 style={logo}>AUTO AS</h1>}
+        brand="AUTO AS"
         rightLinks={<HeaderLinks />}
         fixed
         changeColorOnScroll={{
@@ -84,7 +84,7 @@ export default function LandingPage(props) {
         }}
         {...rest}
       />
-      
+      </Link>
       {/* <Parallax filter image={require("assets/img/autoas_5.jpg")} >
         <div className={classes.container}>
           <GridContainer>

@@ -17,7 +17,7 @@ export default function AboutSection() {
   return (
     <div className={classes.section} id="about" style={{paddingTop: '120px'}}> 
       <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={10}>
+        <GridItem xs={12} sm={12} md={12}>
           <h2 className={classes.title} >Om os</h2>
 
           <h5 className={classes.description} align="center" style={{ fontSize: 18}}>Det uafhængige selskab blev grundlagt i 2019. Det kom som resultatet af mange års erfaring i bilbranchen, 
