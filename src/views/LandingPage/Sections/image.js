@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import image from 'assets/img/ClipartKey_242125.png';
-
-
+import GridItem from 'components/Grid/GridItem';
 
 
   class Image extends Component {
     render(){
       return(
-        <div>
-        <img align="center" className="picture" src={image} alt="Tjeneste"/>
-        </div>
+        
+          <GridItem>
+        <img style={{maxWidth: '100%'}} align="center" className="picture" src={image} alt="Tjeneste"/>
+        </GridItem>
         
      );
     }
