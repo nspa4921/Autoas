@@ -32,7 +32,7 @@ export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   const AutoplaySlider = withAutoplay(AwesomeSlider);
-  var bgColors = { "Default": 'rgba(242, 251, 251, 0.21)'};
+  var bgColors = { "Default": 'rgba(0, 0, 0, 0.37)'};
 
   const slider = (
     <AutoplaySlider 
@@ -46,21 +46,21 @@ export default function LandingPage(props) {
       <div id="top" filter data-src={require('assets/img/autoas_12_edited.jpg')} >  
       <GridContainer>
             <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
-            <h1 style={{fontSize: "72px", fontWeight: 973, color: "rgba(130, 149, 247, 0.68)"}}> BILPLEJE </h1>
+            <h1> BILPLEJE </h1>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_7_edited_c.jpg')} >  
       <GridContainer >
             <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
-            <h1 style={{fontSize: "72px", fontWeight: 973, color: "rgba(130, 149, 247, 0.68)"}}> REPARATION </h1>
+              <h1> REPARATION </h1>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_5_edited.jpg')} >  
       <GridContainer>
-            <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}} >
-            <h1 style={{fontSize: "72px", fontWeight: 973, color: "rgba(130, 149, 247, 0.68)"}}> BILRUDER </h1>
+            <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
+              <h1> BILRUDER </h1>
             </GridItem>
           </GridContainer>
       </div>

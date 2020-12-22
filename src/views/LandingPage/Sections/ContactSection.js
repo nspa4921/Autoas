@@ -18,7 +18,7 @@ export default function ContactSection() {
   return (
     <div className={classes.section} id="contact" style={{paddingTop: "115px"}}>
       <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={8}>
+        <GridItem xs={12} sm={12} md={8} >
           <h2 className={classes.title}>Book tid hos os</h2>
           <h4 className={classes.description}>
             Divide details about your product or agency work into parts. Write a

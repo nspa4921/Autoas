@@ -12,9 +12,11 @@ import GridItem from "components/Grid/GridItem.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import Image from "views/LandingPage/Sections/image";
 
+
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
 const useStyles = makeStyles(styles);
+
 
 
 export default function ServiceSection() {
@@ -22,7 +24,7 @@ export default function ServiceSection() {
   return (
     <div id="service" style={{paddingTop: "110px"}} className={classes.section}>
       <GridContainer justify="center">
-      <GridItem xs={6} sm={12} md={12}>
+      <GridItem xs={12} sm={12} md={12}>
           <h2 className={classes.title}>Tjenester</h2>
           <br></br>
           <Image />
