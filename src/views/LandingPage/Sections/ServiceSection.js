@@ -32,7 +32,7 @@ export default function ServiceSection() {
         </GridItem>
       </GridContainer>   
         <GridContainer>
-          <GridItem xs={6} sm={12} md={4}>
+          <GridItem xs={6} sm={12} md={3}>
             <InfoArea
               title="Klargøring"
               description="Kosmetisk klargøring af køretøjets indre og ydre "
@@ -41,7 +41,7 @@ export default function ServiceSection() {
               vertical
             />
           </GridItem>
-          <GridItem xs={6} sm={12} md={4}>
+          <GridItem xs={6} sm={12} md={3}>
             <InfoArea
               title="Lugtfjernelse "
               description="Fjernelse af tunge ubehagelige lugte fra køretøjet forårsaget af: noget brand, tobaksrøg, lugt af animalsk oprindelse ..."
@@ -50,7 +50,7 @@ export default function ServiceSection() {
               vertical
             />
           </GridItem>
-          <GridItem xs={6} sm={12} md={4}>
+          <GridItem xs={6} sm={12} md={3}>
             <InfoArea
               title="Lakbehandling"
               description="Fjernelse af alle typer skader på lakken - lak og monteringsdele på køretøjet (polering, maling, udskiftning)"
@@ -59,7 +59,7 @@ export default function ServiceSection() {
               vertical
             />
             </GridItem>
-            <GridItem xs={6} sm={12} md={4}>
+            <GridItem xs={6} sm={12} md={3}>
             <InfoArea
               title="Forsikringssager  "
               description="I ovenstående beskrivelse.."
