@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import "assets/css/App.css"
+import 'assets/css/App.css';
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
 
