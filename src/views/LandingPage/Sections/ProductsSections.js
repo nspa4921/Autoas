@@ -26,7 +26,8 @@ export default function ImgMediaCard() {
 	<div className={classes.section} id="products" style={{paddingTop: '120px'}}>
 		 <GridContainer justify="center">
         <GridItem >
-          <h2 className={classes.title}>Produkter</h2>
+          <h2 className={classes.title}>PRODUKTER</h2>
+          <br></br>
       <CardMedia
         className={classesBase.media}
         image={waveImg}

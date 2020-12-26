@@ -7,24 +7,20 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
-import DateTimePicker from "components/ContactForm/DateTimePicker.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPageSections/workStyle.js";
 
 const useStyles = makeStyles(styles);
 
 export default function ContactSection() {
   const classes = useStyles();
+
   return (
-    <div className={classes.section} id="contact" style={{paddingTop: "115px"}}>
+    <div className={classes.section} id="contact" style={{paddingTop: "140px"}}>
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8} >
-          <h2 className={classes.title}>Book tid hos os</h2>
+          <h2 className={classes.title}>BOOK DIN TID HOS OS</h2>
           <h4 className={classes.description}>
-            Divide details about your product or agency work into parts. Write a
-            few lines about each one and contact us about any further
-            collaboration. We will responde get back to you in a couple of
-            hours.
+               Hvordan kan vi behandle din skade? Her kan du selv booke din næste tid hos os. Du kan også ringe til os på telefon 20 78 79 55.
           </h4>
           <form>
             <GridContainer>
@@ -48,13 +44,20 @@ export default function ContactSection() {
               </GridItem>
 
               <GridItem xs={12} sm={12} md={4}>
-              <DateTimePicker labelText="Dit e-mail"
-                  id="email"
-                  formControlProps={{
-                    fullWidth: true
-                  }}/>
-        
-        </GridItem>
+              <CustomInput
+                labelText="Date"
+                id="date"
+                formControlProps={{
+                fullWidth: true
+                }}
+                inputProps={{
+                type: "date",
+                autoFocus: true,
+                defaultValue: "2017-05-24"
+                }}
+                />
+             </GridItem>
+             
               <CustomInput
                 labelText="Hvad skal vi lave for dig?"
                 id="message"

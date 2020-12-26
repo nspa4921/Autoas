@@ -10,10 +10,10 @@ import ListItem from "@material-ui/core/ListItem";
 import Tooltip from "@material-ui/core/Tooltip";
 
 // @material-ui/icons
-import LanguageIcon from '@material-ui/icons/Language';
+// import LanguageIcon from '@material-ui/icons/Language';
 
 // core components
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
+// import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
 import Button from "components/CustomButtons/Button.js";
 
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
@@ -72,7 +72,7 @@ export default function HeaderLinks(props) {
         </Button>
         </Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           buttonText=""
@@ -90,7 +90,7 @@ export default function HeaderLinks(props) {
           </Link>
           ]}
         />
-      </ListItem>
+      </ListItem> */}
       
       <ListItem className={classes.listItem}>
       </ListItem>
@@ -103,7 +103,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="#"
+            href="https://www.facebook.com/autoas"
             target="_blank"
             className={classes.navLink}
           >
@@ -120,7 +120,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="#"
+            href="https://www.instagram.com/autoas-dk"
             target="_blank"
             className={classes.navLink}
           >

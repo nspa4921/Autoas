@@ -25,6 +25,7 @@
     "react-bootstrap-ribbon": "^4.0.1",
     "react-datetime": "2.16.3",
     "react-dom": "16.13.1",
+    "react-grid-system": "^7.1.1",
     "react-image-lightbox": "^5.1.1",
     "react-image-responsive": "^2.0.2",
     "react-lightbox-component": "^1.2.1",
