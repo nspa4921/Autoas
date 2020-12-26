@@ -22,7 +22,7 @@ export default function ServiceSection() {
     <div id="service"  className={classes.section}>
       <GridContainer justify="center">
       <GridItem xs={12} sm={12} md={12}>
-          <h2 className={classes.title}>Tjenester</h2>
+          <h2 className={classes.title}>TJENESTER</h2>
           <br></br>
           <Image />
           <br></br>

@@ -20,7 +20,7 @@ export default function ContactSection() {
         <GridItem xs={12} sm={12} md={8} >
           <h2 className={classes.title}>BOOK DIN TID HOS OS</h2>
           <h4 className={classes.description}>
-               Hvordan kan vi behandle din skade? Her kan du selv booke din næste tid hos os. Du kan også ringe til os på telefon 20 78 79 55.
+               Hvordan kan vi behandle din skade? Booke din næste tid hos os, eller kan du også ringe til os på telefon <strong>20 78 79 55</strong>.
           </h4>
           <form>
             <GridContainer>
