@@ -15,8 +15,9 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import TypewriterEffect from "components/Typewriter/TypewriterEffect.js";
-
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
+import { createMuiTheme, responsiveFontSizes, ThemeProvider } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 
 // Sections for this page
 import AboutSection from "./Sections/AboutSection.js";
@@ -27,11 +28,14 @@ import ContactSection from "./Sections/ContactSection.js";
 const dashboardRoutes = [];
 const useStyles = makeStyles(styles);
 
+
 export default function LandingPage(props) {
   const classes = useStyles();
   const { ...rest } = props;
   const AutoplaySlider = withAutoplay(AwesomeSlider);
-  var bgColors = { "Default": 'rgba(0, 0, 0, 0.37)'};
+  var bgColors = { "Default": 'rgba(0, 0, 0, 0.37)', };
+  let theme = createMuiTheme();
+  theme = responsiveFontSizes(theme);
 
   const slider = (
     <AutoplaySlider 
@@ -43,23 +47,29 @@ export default function LandingPage(props) {
     interval={4000}
     >
       <div filter data-src={require('assets/img/autoas_12_edited.jpg')} >  
-      <GridContainer>
+      <GridContainer >
             <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
-            <h1> <TypewriterEffect title="BILPLEJE" /> </h1>
+            <ThemeProvider theme={theme}>
+             <Typography variant="h2" style={{ textShadow: '3px 3px rgba(0, 0, 0, 0.64)', fontFamily:'"Segoe UI Symbol"'}}> <TypewriterEffect title="BILPLEJE" /> </Typography>
+             </ThemeProvider>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_7_edited_c.jpg')} >  
       <GridContainer >
             <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
-              <h1> <TypewriterEffect title="REPARATION" /> </h1>
+            <ThemeProvider theme={theme}>
+             <Typography variant="h2" style={{textShadow: '3px 3px rgba(0, 0, 0, 0.64)', fontFamily:'"Segoe UI Symbol"'}}> <TypewriterEffect title="REPARATION" /> </Typography>
+             </ThemeProvider>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_5_edited.jpg')} >  
       <GridContainer>
             <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
-              <h1> <TypewriterEffect title="BILRUDER" />  </h1>
+            <ThemeProvider theme={theme}>
+             <Typography variant="h2" style={{textShadow: '3px 3px rgba(0, 0, 0, 0.64)', fontFamily:'"Segoe UI Symbol"'}}> <TypewriterEffect title="BILRUDER" /> </Typography>
+             </ThemeProvider>
             </GridItem>
           </GridContainer>
       </div>
