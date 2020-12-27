@@ -15,16 +15,16 @@ export default function ContactSection() {
   const classes = useStyles();
 
   return (
-    <div className={classes.section} id="contact" style={{paddingTop: "140px"}}>
+    <div className={classes.section} id="contact" style={{paddingTop: "", paddingBottom: "200px"}}>
       <GridContainer justify="center">
-        <GridItem xs={12} sm={12} md={8} >
+        <GridItem xs={12} sm={12} md={9} >
           <h2 className={classes.title}>BOOK DIN TID HOS OS</h2>
-          <h4 className={classes.description}>
+          <h4 className={classes.description} align="left">
                Hvordan kan vi behandle din skade? Book din næste tid hos os, eller ringe på telefon <strong>20 78 79 55</strong>.
           </h4>
           <form>
             <GridContainer>
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={11} sm={12} md={4}>
                 <CustomInput
                   labelText="Dit navn"
                   id="name"
@@ -33,7 +33,7 @@ export default function ContactSection() {
                   }}
                 />
               </GridItem>
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={11} sm={12} md={4}>
                 <CustomInput
                   labelText="Dit e-mail"
                   id="email"
@@ -43,7 +43,7 @@ export default function ContactSection() {
                 />
               </GridItem>
 
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={11} sm={12} md={4}>
               <CustomInput
                 labelText="Vælg en dato"
                 id="date"
@@ -58,7 +58,7 @@ export default function ContactSection() {
                 />
              </GridItem>
              
-              <CustomInput
+              <CustomInput 
                 labelText="Hvad skal vi lave for dig?"
                 id="message"
                 formControlProps={{
@@ -71,7 +71,7 @@ export default function ContactSection() {
                 }}
               />
    
-              <GridItem xs={12} sm={12} md={4}>
+              <GridItem xs={11} sm={12} md={4}>
                 <Button color="primary">Send besked</Button>
               </GridItem>
             </GridContainer>

@@ -7,29 +7,19 @@ import GridItem from "components/Grid/GridItem.js";
 import waveImg from "assets/img/bg-autoas_edited_a.jpg";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
-
 const useStyles = makeStyles(styles);
-const useStyles1 = makeStyles({
-  root: {
-	maxWidth: '100%',
-  },
-  media: {
-	height: "420px",
-  },
-});
+
 
 export default function ImgMediaCard() {
-  const classesBase = useStyles1();
   const classes = useStyles();
 
   return (
 	<div className={classes.section} id="products" >
-		 <GridContainer justify="center">
-        <GridItem >
+		 <GridContainer justify="center" >
+        <GridItem xs={10} sm={12} md={12}>
           <h2 className={classes.title}>PRODUKTER</h2>
           <br></br>
       <CardMedia
-        className={classesBase.media}
         image={waveImg}
       />
       <CardContent>

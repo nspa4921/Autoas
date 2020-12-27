@@ -14,10 +14,9 @@ import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-// import Parallax from "components/Parallax/Parallax.js";
+import TypewriterEffect from "components/Typewriter/TypewriterEffect.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
-import "assets/css/App.css";
 
 // Sections for this page
 import AboutSection from "./Sections/AboutSection.js";
@@ -46,21 +45,21 @@ export default function LandingPage(props) {
       <div filter data-src={require('assets/img/autoas_12_edited.jpg')} >  
       <GridContainer>
             <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
-            <h1> BILPLEJE </h1>
+            <h1> <TypewriterEffect title="BILPLEJE" /> </h1>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_7_edited_c.jpg')} >  
       <GridContainer >
             <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
-              <h1> REPARATION </h1>
+              <h1> <TypewriterEffect title="REPARATION" /> </h1>
             </GridItem>
           </GridContainer>
       </div>
       <div data-src={require('assets/img/autoas_5_edited.jpg')} >  
       <GridContainer>
             <GridItem align="center" className={classes.container} style={{backgroundColor: bgColors.Default}}>
-              <h1> BILRUDER </h1>
+              <h1> <TypewriterEffect title="BILRUDER" />  </h1>
             </GridItem>
           </GridContainer>
       </div>
