@@ -23,7 +23,7 @@ export default function ImgMediaCard() {
   const classes = useStyles();
 
   return (
-	<div className={classes.section} id="products" style={{paddingTop: '120px'}}>
+	<div className={classes.section} id="products" >
 		 <GridContainer justify="center">
         <GridItem >
           <h2 className={classes.title}>PRODUKTER</h2>

@@ -17,6 +17,7 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 // import Parallax from "components/Parallax/Parallax.js";
 
 import styles from "assets/jss/material-kit-react/views/landingPage.js";
+import "assets/css/App.css";
 
 // Sections for this page
 import AboutSection from "./Sections/AboutSection.js";

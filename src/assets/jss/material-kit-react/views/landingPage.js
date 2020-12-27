@@ -10,7 +10,7 @@ const landingPageStyle = {
     ...title,
     display: "inline-block",
     position: "relative",
-    marginTop: "30px",
+    marginTop: "300px",
     minHeight: "32px",
     color: "#FFFFFF",
     textDecoration: "none"
