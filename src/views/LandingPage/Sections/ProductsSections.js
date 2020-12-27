@@ -8,9 +8,18 @@ import waveImg from "assets/img/bg-autoas_edited_a.jpg";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
 
 const useStyles = makeStyles(styles);
-
+const useStyles1 = makeStyles({
+  root: {
+	maxWidth: '100%',
+  },
+  media: {
+  height: "420px",
+  Width: '100%',
+  },
+});
 
 export default function ImgMediaCard() {
+  const classesBase = useStyles1();
   const classes = useStyles();
 
   return (
@@ -20,6 +29,7 @@ export default function ImgMediaCard() {
           <h2 className={classes.title}>PRODUKTER</h2>
           <br></br>
       <CardMedia
+        className={classesBase.media}
         image={waveImg}
       />
       <CardContent>

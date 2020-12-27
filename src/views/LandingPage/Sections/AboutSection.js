@@ -13,7 +13,7 @@ export default function AboutSection() {
   const classes = useStyles();
 
   return ( 
-    <div className="App" id="about" style={{paddingTop: '120px',  paddingBottom: '150px'}}> 
+    <div className="App" id="about" style={{paddingTop: '200px',  paddingBottom: '150px'}}> 
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
           <h2 className={classes.title} align="center">OM OS</h2>
