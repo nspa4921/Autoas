@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import image from 'assets/img/ClipartKey_242125.png';
+import image from 'assets/img/car-wash-auto-detailing-automobile-repair-shop-vehicle-car-f8c6ed84a3c6c5cbc3bb42cfae2e2666.png';
 import GridItem from 'components/Grid/GridItem';
 
 
@@ -8,7 +8,7 @@ import GridItem from 'components/Grid/GridItem';
       return(
         
           <GridItem>
-        <img style={{width: '780px', maxWidth: '100%'}} align="center" className="picture" src={image} alt="Tjeneste"/>
+        <img style={{width: '450px', maxWidth: '100%'}} align="center" className="picture" src={image} alt="Tjeneste"/>
         </GridItem>
         
      );

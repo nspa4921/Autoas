@@ -33,7 +33,7 @@ export default function ImgMediaCard() {
         image={waveImg}
       />
       <CardContent>
-      <h5 className={classes.description} align="center" style={{ fontSize: 18}}>
+      <h5 className={classes.description} align="center" style={{ fontSize: 18, color: "rgba(0,0,0,0.9)"}}>
 		De produkter, der bruges til klargøring (både indvendigt og udvendigt), er verdens kendet brands med en lang tradition og kvalitet i bilverdenen.
         </h5>
       </CardContent>
