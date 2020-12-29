@@ -20,12 +20,16 @@ import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js
 
 const useStyles = makeStyles(styles);
 
+
 export default function HeaderLinks(props) {
   const classes = useStyles();
+  
+ 
+
   return (
     <List className={classes.list} >
       <ListItem className={classes.listItem}>
-      <Link to="about" spy={true} smooth={true} className={classes.list}>
+      <Link to="about" spy={true} smooth={true} className={classes.list} >
         <Button
           href="#"
           color="transparent"
