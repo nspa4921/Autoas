@@ -4,6 +4,8 @@ import classNames from "classnames";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // @material-ui/core components
+import { Fab } from "@material-ui/core";
+import { KeyboardArrowUp } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -11,6 +13,9 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+import BackToTop from "./BackToTop";
+import HideOnScroll from "./HideOnScroll";
+
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 // core components
@@ -63,6 +68,8 @@ export default function Header(props) {
   });
   const brandComponent = <Button className={classes.title}>{brand}</Button>;
   return (
+    <>
+      <HideOnScroll>
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
         {leftLinks !== undefined ? brandComponent : null}
@@ -107,6 +114,15 @@ export default function Header(props) {
         </Drawer>
       </Hidden>
     </AppBar>
+    </HideOnScroll>
+      <Toolbar id="back-to-top-anchor" />
+
+      <BackToTop>
+        <Fab color="secondary" size="large" aria-label="scroll back to top">
+          <KeyboardArrowUp />
+        </Fab>
+      </BackToTop>
+    </>
   );
 }
 

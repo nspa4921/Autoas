@@ -1,33 +1,44 @@
-import React from "react";
-// react components for routing our app without refresh
-// import { Link } from "react-router-dom";
-import {Link} from 'react-scroll';
-
-// @material-ui/core components
+import {
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Tooltip from "@material-ui/core/Tooltip";
-
-// @material-ui/icons
-// import LanguageIcon from '@material-ui/icons/Language';
-
-// core components
-// import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
-import Button from "components/CustomButtons/Button.js";
-
+import { Menu } from "@material-ui/icons";
+import * as React from "react";
+import { useState } from "react";
+// import HeaderLinks from "./HeaderLinks";
 import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
+import {Link} from 'react-scroll';
+import Button from "components/CustomButtons/Button.js";
+import Tooltip from "@material-ui/core/Tooltip";
 
 const useStyles = makeStyles(styles);
 
-
-export default function HeaderLinks(props) {
+const SideDrawer = ({ navLinks }) => {
   const classes = useStyles();
-  
- 
+  const [state, setState] = useState({ right: false });
 
-  return (
-    <List className={classes.list} >
+  const handleDrawerToggle = (anchor, open) => event => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ [anchor]: open });
+  };
+
+  const sideDrawerList = anchor => (
+    <div
+      role="presentation"
+      onClick={handleDrawerToggle(anchor, false)}
+      onKeyDown={handleDrawerToggle(anchor, false)}
+    >
+      <List >
       <ListItem className={classes.listItem}>
       <Link to="about" spy={true} smooth={true} className={classes.list} >
         <Button
@@ -133,5 +144,29 @@ export default function HeaderLinks(props) {
         </Tooltip>
       </ListItem>
     </List>
+    </div>
   );
-}
+
+  return (
+    <React.Fragment>
+      <IconButton
+        edge="start"
+        aria-label="menu"
+        onClick={handleDrawerToggle("right", true)}
+      >
+        <Menu fontSize="large" style={{ color: `white` }} />
+      </IconButton>
+
+      <Drawer
+        anchor="right"
+        open={state.right}
+        onOpen={handleDrawerToggle("right", true)}
+        onClose={handleDrawerToggle("right", false)}
+      >
+        {sideDrawerList("right")}
+      </Drawer>
+    </React.Fragment>
+  );
+};
+
+export default SideDrawer;
