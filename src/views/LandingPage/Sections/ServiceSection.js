@@ -34,7 +34,7 @@ export default function ServiceSection() {
               title="Klargøring"
               description="Kosmetisk klargøring af køretøjets indre og ydre "
               icon={DoneOutlineSharpIcon}
-              iconColor="gray"
+              iconColor="primary"
               vertical
             />
           </GridItem>
@@ -43,7 +43,7 @@ export default function ServiceSection() {
               title="Lugtfjernelse "
               description="Fjernelse af tunge ubehagelige lugte fra køretøjet forårsaget af: noget brand, tobaksrøg, lugt af animalsk oprindelse ..."
               icon={LocalCarWashSharpIcon}
-              iconColor="gray"
+              iconColor="primary"
               vertical
             />
           </GridItem>
@@ -52,7 +52,7 @@ export default function ServiceSection() {
               title="Lakbehandling"
               description="Fjernelse af alle typer skader på lakken - lak og monteringsdele på køretøjet (polering, maling, udskiftning)"
               icon={DoneOutlineSharpIcon}
-              iconColor="gray"
+              iconColor="primary"
               vertical
             />
             </GridItem>
@@ -61,7 +61,7 @@ export default function ServiceSection() {
               title="Forsikringssager  "
               description="I ovenstående beskrivelse.."
               icon={DoneOutlineSharpIcon}
-              iconColor="gray"
+              iconColor="primary"
               vertical
             />
           </GridItem>

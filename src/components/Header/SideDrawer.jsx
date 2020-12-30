@@ -9,19 +9,27 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Menu } from "@material-ui/icons";
 import * as React from "react";
 import { useState } from "react";
-// import HeaderLinks from "./HeaderLinks";
-import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
 import {Link} from 'react-scroll';
 import Button from "components/CustomButtons/Button.js";
 import Tooltip from "@material-ui/core/Tooltip";
 
-const useStyles = makeStyles(styles);
+const useStyles = makeStyles({
+  list: {
+    width: 150
+  },
+  linkText: {
+    textDecoration: `none`,
+    textTransform: `uppercase`,
+    color: `black`
+  }
+});
 
-const SideDrawer = ({ navLinks }) => {
+
+const SideDrawer = () => {
   const classes = useStyles();
   const [state, setState] = useState({ right: false });
 
-  const handleDrawerToggle = (anchor, open) => event => {
+  const toggleDrawer = (anchor, open) => event => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -34,11 +42,13 @@ const SideDrawer = ({ navLinks }) => {
 
   const sideDrawerList = anchor => (
     <div
+      className={classes.list}
       role="presentation"
-      onClick={handleDrawerToggle(anchor, false)}
-      onKeyDown={handleDrawerToggle(anchor, false)}
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List >
+      
+      <List className={classes.list} >
       <ListItem className={classes.listItem}>
       <Link to="about" spy={true} smooth={true} className={classes.list} >
         <Button
@@ -143,27 +153,37 @@ const SideDrawer = ({ navLinks }) => {
           </Button>
         </Tooltip>
       </ListItem>
-    </List>
+    
+      </List>
     </div>
   );
 
   return (
-    <React.Fragment>
+    <React.Fragment >
       <IconButton
         edge="start"
         aria-label="menu"
-        onClick={handleDrawerToggle("right", true)}
+        onClick={toggleDrawer("right", true)}
       >
         <Menu fontSize="large" style={{ color: `white` }} />
       </IconButton>
 
-      <Drawer
+      <Drawer 
         anchor="right"
         open={state.right}
-        onOpen={handleDrawerToggle("right", true)}
-        onClose={handleDrawerToggle("right", false)}
+        onOpen={toggleDrawer("right", true)}
+        onClose={toggleDrawer("right", false)}
+        classes={{
+          paper: classes.drawerPaper
+        }}
+        ModalProps={{
+          keepMounted: true
+        }}
       >
         {sideDrawerList("right")}
+         <div className={classes.appResponsive}>
+           
+          </div>
       </Drawer>
     </React.Fragment>
   );

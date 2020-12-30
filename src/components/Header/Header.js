@@ -15,9 +15,10 @@ import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
 import BackToTop from "./BackToTop";
 import HideOnScroll from "./HideOnScroll";
-
+// import HeaderLinks from "./HeaderLinks";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
+import Close from "@material-ui/icons/Close";
 // core components
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
@@ -26,6 +27,7 @@ const useStyles = makeStyles(styles);
 export default function Header(props) {
   const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  
   React.useEffect(() => {
     if (props.changeColorOnScroll) {
       window.addEventListener("scroll", headerColorChange);
@@ -66,6 +68,7 @@ export default function Header(props) {
     [classes.absolute]: absolute,
     [classes.fixed]: fixed
   });
+
   const brandComponent = <Button className={classes.title}>{brand}</Button>;
   return (
     <>
@@ -96,7 +99,7 @@ export default function Header(props) {
         </Hidden>
       </Toolbar> 
       <Hidden mdUp implementation="js">
-      <Drawer
+      <Drawer 
             variant="temporary"
             open={mobileOpen}
             onClose={handleDrawerToggle}
@@ -105,9 +108,9 @@ export default function Header(props) {
             }}
             ModalProps={{
               keepMounted: true
-            }}
-          >
-          <div className={classes.appResponsive}>
+            }} >
+          <Close onClick={handleDrawerToggle} />
+          <div className={classes.appResponsive} onClick={handleDrawerToggle}>
             {leftLinks}
             {rightLinks}
           </div>
