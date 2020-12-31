@@ -18,7 +18,7 @@ import HideOnScroll from "./HideOnScroll";
 // import HeaderLinks from "./HeaderLinks";
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
-import Close from "@material-ui/icons/Close";
+// import Close from "@material-ui/icons/Close";
 // core components
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
@@ -109,7 +109,7 @@ export default function Header(props) {
             ModalProps={{
               keepMounted: true
             }} >
-          <Close onClick={handleDrawerToggle} />
+          {/* <Close onClick={handleDrawerToggle}/> */}
           <div className={classes.appResponsive} onClick={handleDrawerToggle}>
             {leftLinks}
             {rightLinks}
