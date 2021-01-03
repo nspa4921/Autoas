@@ -1,44 +1,55 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import waveImg from "assets/img/bg-autoas_edited_a.jpg";
+import { Parallax, Background } from "react-parallax";
 import styles from "assets/jss/material-kit-react/views/landingPageSections/productStyle.js";
+// import waveImg from "assets/img/bg-autoas_edited_a.jpg";
+
 
 const useStyles = makeStyles(styles);
-const useStyles1 = makeStyles({
-  root: {
-	maxWidth: '100%',
-  },
-  media: {
-  height: "420px",
-  Width: '100%',
-  },
-});
+
+
+const insideStyles = {
+  background: "rgba(255,255,255,0.7)",
+  padding: 10,
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%,-50%)",
+  boxShadow:
+    "0 12px 20px -10px rgba(156, 39, 176, 0.28), 0 4px 20px 0px rgba(0, 0, 0, 0.12), 0 7px 8px -5px rgba(156, 39, 176, 0.2)"
+};
+
+  
 
 export default function ImgMediaCard() {
-  const classesBase = useStyles1();
   const classes = useStyles();
 
   return (
-	<div className={classes.section} id="products" >
-		 <GridContainer justify="center" >
-        <GridItem xs={10} sm={12} md={12}>
-          <h2 className={classes.title}>PRODUKTER</h2>
-          <br></br>
-      <CardMedia
+    <div className={classes.section} id="products" >
+         <h2 className={classes.title}>PRODUKTER</h2>
+        <br></br>  
+    <Parallax strength={500}>
+      <Background className="custom-bg">
+        <div
+          style={{
+            height: 2000,
+            width: 2000,
+            backgroundImage: "url('http://www.ns-app.com/img/autoas_12_edited.jpg')"
+          }}
+        />
+      </Background>
+      <div style={{ height: 500 }} >
+        <div style={insideStyles}><h5 className={classes.description} align="center" style={{ fontSize: 21, color: "black", fontStyle: "italic", textShadow: "1px 1px #white"}}>
+		De produkter, der bruges til klargøring (både indvendigt og udvendigt), er verdens kendet brands med en lang tradition og kvalitet i bilverdenen.
+    </h5></div>
+      </div>
+    </Parallax>
+   {/* <CardMedia
         className={classesBase.media}
         image={waveImg}
-      />
-      <CardContent>
-      <h5 className={classes.description} align="center" style={{ fontSize: 18, color: "rgba(0,0,0,0.9)"}}>
-		De produkter, der bruges til klargøring (både indvendigt og udvendigt), er verdens kendet brands med en lang tradition og kvalitet i bilverdenen.
-        </h5>
-      </CardContent>
-	</GridItem>
-		  </GridContainer>
-	</div>
+      /> */}
+ 
+     
+ </div>
   );
 }
