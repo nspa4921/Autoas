@@ -50,8 +50,11 @@ const sendEmail = (e) => {
 const handleSubmit = (e) => {
   e.preventDefault();
   alert("Tak! Vi vender tilbage med et svar på din henvendelse hurtigst muligt.");
+  setValues({ name: '',
+  email: '',
+  date: '',
+  message: '' });
     if (!isFormValid()) {
-       //message of error in the screen, maybe sweet alerts
        console.log('falta algo')
     } else{ 
       sendEmail(e)
@@ -87,7 +90,8 @@ return (
                     }}
                   />
                   </GridItem>
-                  <GridItem xs={11} sm={12} md={4}>
+
+                <GridItem xs={11} sm={12} md={4}>
                   <CustomInput
                     labelText="Email..."
                     id="email"
@@ -109,26 +113,26 @@ return (
                   />
                   </GridItem>
 
-                  <GridItem xs={11} sm={12} md={4}>
-              <CustomInput
-                labelText="Vælg en dato"
-                id="date"
-                onChange={handleChange()}
-                formControlProps={{
-                fullWidth: true
-                }}
-                inputProps={{
-                type: "date",
-                name: "date",
-                onChange: handleChange(),
-                // autoFocus: true,
-                defaultValue: "2021-01-01"
-                }}
-                />
-             </GridItem>
+                <GridItem xs={11} sm={12} md={4}>
+                  <CustomInput
+                    labelText="Vælg en dato"
+                    id="date"
+                    onChange={handleChange()}
+                    formControlProps={{
+                    fullWidth: true
+                    }}
+                    inputProps={{
+                    type: "date",
+                    name: "date",
+                    onChange: handleChange(),
+                    // autoFocus: true,
+                    defaultValue: "2021-01-01"
+                    }}
+                    />
+                </GridItem>
 
 
-                  <GridItem>
+                <GridItem>
                   <CustomInput
                     labelText="Hvad skal vi lave for dig?"
                     id="message"
@@ -150,7 +154,7 @@ return (
                       name: "message"
                     }}
                   />
-                  </GridItem>
+                </GridItem>
                 <GridItem xs={11} sm={12} md={4}>
                 <Button color="primary" type="submit" value="Submit"> Send besked</Button>
               </GridItem>
