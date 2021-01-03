@@ -93,7 +93,7 @@ return (
 
                 <GridItem xs={11} sm={12} md={4}>
                   <CustomInput
-                    labelText="Email..."
+                    labelText="Email"
                     id="email"
                     type='email'
                     required={true}
