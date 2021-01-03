@@ -73,7 +73,7 @@ return (
           <GridContainer>
                 <GridItem xs={11} sm={12} md={4}>
                   <CustomInput
-                    labelText="Name"
+                    labelText="Navn"
                     id="name"
                     required={true}
                     formControlProps={{
@@ -93,7 +93,7 @@ return (
 
                 <GridItem xs={11} sm={12} md={4}>
                   <CustomInput
-                    labelText="Email"
+                    labelText="E-mail"
                     id="email"
                     type='email'
                     required={true}
