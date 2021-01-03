@@ -3,7 +3,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import SimpleReactLightbox from 'simple-react-lightbox';
+// import SimpleReactLightbox from 'simple-react-lightbox';
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
 import 'react-awesome-slider/dist/styles.css';
@@ -107,9 +107,7 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <AboutSection />                 
           <ServiceSection />
-          <SimpleReactLightbox>
         <ProductsSection />
-        </SimpleReactLightbox>
           <ContactSection />
         </div>
       </div>
