@@ -9,7 +9,6 @@ import { List, ListItem } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import {Link} from 'react-scroll';
 
-// @material-ui/icons
 // import Favorite from "@material-ui/icons/Favorite";
 
 import styles from "assets/jss/material-kit-react/components/footerStyle.js";
@@ -79,8 +78,7 @@ export default function Footer(props) {
           </List>
         </div>
         
-        <div className={classes.right}>
-          Telefon: +45 20787955 | CVR: 40825061 | E-mail: <a href="mailto:autoas19@gmail.com">autoas19@gmail.com</a>
+        <div className={classes.right}>Højvang 4, 4300 Holbæk | CVR: 40825061 | E-mail: <a href="mailto:autoas19@gmail.com">autoas19@gmail.com</a>
         </div>
         
       </div>
