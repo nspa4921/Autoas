@@ -42,7 +42,7 @@ export default function ProductsSection() {
     speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
   };
 
   return (
