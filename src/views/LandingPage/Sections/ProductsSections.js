@@ -8,11 +8,11 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 
-import image5 from "assets/img/bg-1.jpg";
+import image5 from "assets/img/IMG-20200323-WA0007[1035]_edited.jpg";
 import image2 from "assets/img/bg-2.jpg";
 import image3 from "assets/img/bg-3.jpg";
-import image4 from "assets/img/bg-4.jpg";
-import image1 from "assets/img/bg-5.jpg";
+import image4 from "assets/img/bg-4a.jpg";
+import image1 from "assets/img/product1.jpg";
 
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.js";
