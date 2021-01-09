@@ -68,7 +68,7 @@ return (
         <GridItem xs={12} sm={12} md={9} >
           <h2 className={classes.title}>BOOK DIN TID HOS OS</h2>
           <h4 className={classes.description} align="left"  style={{ fontSize: 18, color: "rgba(0,0,0,0.9)"}}>
-               Hvordan kan vi behandle din skade? Book din næste tid hos os, eller ringe på telefon <strong>20 78 79 55</strong>. 
+               Hvordan kan vi behandle din skade? Book din næste tid hos os, eller ring på telefon <strong>20 78 79 55</strong>. 
                Du kan også besøge os på Højvang 4, 4300 Holbæk. <LocationOn className="slick-icons" /> 
           </h4>
           <form onSubmit={(e) => handleSubmit(e)}>

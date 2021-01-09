@@ -41,7 +41,7 @@ export default function ServiceSection() {
           <GridItem xs={12} sm={12} md={3}>
             <InfoArea
               title="Lugtfjernelse "
-              description="Fjernelse af tunge ubehagelige lugte fra køretøjet forårsaget af: noget brand, tobaksrøg, lugt af animalsk oprindelse ..."
+              description="Fjernelse af tunge ubehagelige lugte fra køretøjet forårsaget af: noget brandt, tobaksrøg, lugt af animalsk oprindelse ..."
               icon={LocalCarWashSharpIcon}
               iconColor="primary"
               vertical

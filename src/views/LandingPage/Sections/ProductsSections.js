@@ -52,7 +52,7 @@ export default function ProductsSection() {
           <h2 className={classesBase.title}>PRODUKTER</h2>
           <div className={classesBase.description}>
       <h5 className="explanation"  align="center" style={{ fontSize: 18, color: "rgba(0,0,0,0.9)"}}>
-              De produkter, der bruges til klargøring (både indvendigt og udvendigt), er verdens kendet brands med en lang tradition og kvalitet i bilverdenen.
+              De produkter, der bruges til klargøring (både indvendigt og udvendigt), er verdens kendt brands med en lang tradition og kvalitet i bilverdenen.
               </h5>
             </div>
         <GridContainer>
