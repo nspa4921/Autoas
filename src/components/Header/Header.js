@@ -20,6 +20,7 @@ import HideOnScroll from "./HideOnScroll";
 import Menu from "@material-ui/icons/Menu";
 // import Close from "@material-ui/icons/Close";
 // core components
+
 import styles from "assets/jss/material-kit-react/components/headerStyle.js";
 
 const useStyles = makeStyles(styles);
@@ -70,6 +71,7 @@ export default function Header(props) {
   });
 
   const brandComponent = <Button className={classes.title}>{brand}</Button>;
+  
   return (
     <>
       <HideOnScroll>
