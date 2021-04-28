@@ -1,32 +1,54 @@
-import React from "react";
-// react components for routing our app without refresh
-// import { Link } from "react-router-dom";
-import {Link} from 'react-scroll';
-import { HashLink } from 'react-router-hash-link';
-
-// @material-ui/core components
+import {
+  Drawer,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText
+} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import { Menu } from "@material-ui/icons";
+import * as React from "react";
+import { useState } from "react";
+import {Link} from 'react-scroll';
+import Button from "components/CustomButtons/Button.js";
 import Tooltip from "@material-ui/core/Tooltip";
 
-// @material-ui/icons
-import LanguageIcon from '@material-ui/icons/Language';
+const useStyles = makeStyles({
+  list: {
+    width: 150
+  },
+  linkText: {
+    textDecoration: `none`,
+    textTransform: `uppercase`,
+    color: `black`
+  }
+});
 
-// core components
-import CustomDropdown from "components/CustomDropdown/CustomDropdown.js";
-import Button from "components/CustomButtons/Button.js";
 
-import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js";
-
-const useStyles = makeStyles(styles);
-
-
-export default function HeaderLinks(props) {
+const SideDrawer = () => {
   const classes = useStyles();
-  
-  return (
-    <List className={classes.list} >
+  const [state, setState] = useState({ right: false });
+
+  const toggleDrawer = (anchor, open) => event => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setState({ [anchor]: open });
+  };
+
+  const sideDrawerList = anchor => (
+    <div
+      className={classes.list}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      
+      <List className={classes.list} >
       <ListItem className={classes.listItem}>
       <Link to="about" spy={true} smooth={true} className={classes.list} >
         <Button
@@ -75,7 +97,7 @@ export default function HeaderLinks(props) {
         </Button>
         </Link>
       </ListItem>
-      <ListItem className={classes.listItem}>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           buttonText=""
@@ -85,15 +107,15 @@ export default function HeaderLinks(props) {
           }} 
           buttonIcon={LanguageIcon}
           dropdownList={[
-            <HashLink smooth to='/se' className={classes.dropdownLink}>
-              SVENSKA
-              </HashLink>,
-            <HashLink to="/" className={classes.dropdownLink} >
-            DANSK
-          </HashLink>
+            <Link to="/swedish" className={classes.dropdownLink} >
+              SWEDISH
+            </Link>,
+            <Link to="/swedish" className={classes.dropdownLink} >
+            SRPSKI
+          </Link>
           ]}
         />
-      </ListItem>
+      </ListItem> */}
       
       <ListItem className={classes.listItem}>
       </ListItem>
@@ -106,11 +128,11 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="https://www.facebook.com/Autoas-105091244908816"
+            href="https://www.facebook.com/autoas"
             target="_blank"
             className={classes.navLink}
           >
-            <i class="fab fa-facebook-f"></i>
+            <i className={classes.socialIcons + " fab fa-facebook"} />
           </Button>
         </Tooltip>
       </ListItem>
@@ -123,7 +145,7 @@ export default function HeaderLinks(props) {
         >
           <Button
             color="transparent"
-            href="https://www.instagram.com/autoas.dk/"
+            href="https://www.instagram.com/autoas-dk"
             target="_blank"
             className={classes.navLink}
           >
@@ -131,6 +153,40 @@ export default function HeaderLinks(props) {
           </Button>
         </Tooltip>
       </ListItem>
-    </List>
+    
+      </List>
+    </div>
   );
-}
+
+  return (
+    <React.Fragment >
+      <IconButton
+        edge="start"
+        aria-label="menu"
+        onClick={toggleDrawer("right", true)}
+      >
+        <Menu fontSize="large" style={{ color: `white` }} />
+      </IconButton>
+
+      <Drawer 
+        anchor="right"
+        open={state.right}
+        onOpen={toggleDrawer("right", true)}
+        onClose={toggleDrawer("right", false)}
+        classes={{
+          paper: classes.drawerPaper
+        }}
+        ModalProps={{
+          keepMounted: true
+        }}
+      >
+        {sideDrawerList("right")}
+         <div className={classes.appResponsive}>
+           
+          </div>
+      </Drawer>
+    </React.Fragment>
+  );
+};
+
+export default SideDrawer;

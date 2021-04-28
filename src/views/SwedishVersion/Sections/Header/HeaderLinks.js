@@ -35,7 +35,7 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-           Om os
+           Om oss 
         </Button>
         </Link>
       </ListItem>
@@ -47,7 +47,7 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-           Tjenester
+           Tjänster 
         </Button>
         </Link>
       </ListItem>
@@ -71,7 +71,7 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          Kontakt os
+          Kontakta oss 
         </Button>
         </Link>
       </ListItem>

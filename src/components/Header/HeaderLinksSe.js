@@ -22,7 +22,7 @@ import styles from "assets/jss/material-kit-react/components/headerLinksStyle.js
 const useStyles = makeStyles(styles);
 
 
-export default function HeaderLinks(props) {
+export default function HeaderLinksSe(props) {
   const classes = useStyles();
   
   return (
@@ -47,7 +47,7 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-           Tjenester
+           TJÄNSTER 
         </Button>
         </Link>
       </ListItem>
@@ -59,7 +59,7 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          Produkter
+          Produkter 
         </Button>
         </Link>
       </ListItem>
@@ -71,7 +71,7 @@ export default function HeaderLinks(props) {
           target="_blank"
           className={classes.navLink}
         >
-          Kontakt os
+          Kontakta oss 
         </Button>
         </Link>
       </ListItem>
