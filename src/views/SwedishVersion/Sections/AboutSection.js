@@ -17,10 +17,9 @@ export default function AboutSection() {
         <GridItem xs={12} sm={12} md={12}>
           <h2 className={classes.title} align="center">OM OSS</h2>
           <div className={classes.description}>
-          <h5 className="explanation"  align="center" style={{ fontSize: 18, color: "rgba(0,0,0,0.9)"}}>Det uafhængige selskab blev grundlagt i 2019. Det kom som resultatet af mange års erfaring i bilbranchen, 
-          først som en hobby, og derefter som professionelt arbejde.  
+          <h5 className="explanation"  align="center" style={{ fontSize: 18, color: "rgba(0,0,0,0.9)"}}>Den enskilda firman startades 2019 och är ett resultat av en mångårig verksamhet med bilar. Det började som en hobby men som sedan växte till en proffessionell verksamhet.  
           <br></br><br></br>
-          Upåklagelig kvalitet kan ses gennem det vellykkede samarbejde med biludstillings saloner hos <strong>AUDI, WV, TOYOTA</strong>, samt med et betydeligt antal privatpersoner. De er blev erhvervet, til min store tilfredshed, takket være anbefalingerne fra tilfredse kunder. 
+          Den odisputabla kvaliteten framgår ur det framgångsrika samarbetet med flertalet etablerade bilsalonger som <strong>AUDI, WV, TOYOTA</strong> liksom med flertalet privata företag, som alla till min stora tillfredställelse, tillkommit tack vare tidigare nöjda kunders rekommendationer. 
           </h5>
           </div> 
         </GridItem>
