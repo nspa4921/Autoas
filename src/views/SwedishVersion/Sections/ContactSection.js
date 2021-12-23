@@ -76,7 +76,7 @@ return (
           <GridContainer>
                 <GridItem xs={11} sm={12} md={4}>
                   <CustomInput
-                    labelText="Navn"
+                    labelText="Namn"
                     id="name"
                     required={true}
                     formControlProps={{
@@ -118,7 +118,7 @@ return (
 
                 <GridItem xs={11} sm={12} md={4}>
                   <CustomInput
-                    labelText="Vælg en dato"
+                    labelText="Välj ett datum "
                     id="date"
                     onChange={handleChange()}
                     formControlProps={{
@@ -137,7 +137,7 @@ return (
 
                 <GridItem>
                   <CustomInput
-                    labelText="Hvad skal vi lave for dig?"
+                    labelText="Vad ska vi göra för dig? "
                     id="message"
                     required={true}
                     formControlProps={{
@@ -159,7 +159,7 @@ return (
                   />
                 </GridItem>
                 <GridItem xs={11} sm={12} md={4}>
-                <Button color="primary" type="submit" value="Submit"> Send besked</Button>
+                <Button color="primary" type="submit" value="Submit">Skicka meddelande</Button>
               </GridItem>
               </GridContainer>
               </form>

@@ -18,8 +18,9 @@ var hist = createBrowserHistory();
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
-    <Route path="/se" component={SwePage} /> 
       <Route path="/" component={LandingPage} exact />
+      <Route path="/dk" component={LandingPage} exact />
+      <Route path="/se" component={SwePage} exact /> 
       {/* <Route exact path="/swedish" component={LandingSwe}/> */}
     </Switch>
   </Router>,

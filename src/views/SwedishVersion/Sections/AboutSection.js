@@ -11,7 +11,7 @@ const useStyles = makeStyles(styles);
 export default function AboutSection() {
   const classes = useStyles();
 
-  return ( 
+  return (
     <div className="App" id="about" style={{paddingTop: '100px',  paddingBottom: '150px'}}> 
       <GridContainer>
         <GridItem xs={12} sm={12} md={12}>
